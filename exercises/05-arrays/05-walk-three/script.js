@@ -42,4 +42,13 @@
     ];
 
     // your code here
+
+    document.getElementById("run").addEventListener("click",function(){
+        people.forEach(displayName);
+
+        function displayName(person,index){
+            console.log(person.lastname);
+        }
+        })
+
 })();

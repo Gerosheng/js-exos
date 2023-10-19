@@ -24,6 +24,23 @@
         "raisin",
         "cerise",
     ];
+    /*
+    document.getElementById("run").addEventListener("click", function(){
+        fruits.forEach(consoleDisplay);
 
+        function consoleDisplay(value){
+            console.log(value);
+        }
+
+    })
+    */
+    function displayFruit(){
+        for (i = 0; i < fruits.length; i++){
+            console.log(fruits[i]);
+        }
+    }
+
+    const button = document.getElementById("run");
+    button.addEventListener("click", displayFruit);
     // your code here
 })();
