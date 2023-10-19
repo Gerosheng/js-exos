@@ -27,4 +27,20 @@
         user: null,
     };
     // your code here
+    document.getElementById("run").addEventListener("click", () =>{
+
+        const computersDefaults = computers.map((comp) =>{
+
+                for(const prop in defaultProps){
+                    if (comp[prop] === undefined){
+                        comp[prop] = defaultProps[prop];
+                    };
+                };
+                return comp;
+
+            }
+        )
+
+        console.log(computersDefaults);
+    })
 })();

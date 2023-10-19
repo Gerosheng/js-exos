@@ -19,4 +19,14 @@
         status: "married",
     };
     // your code here
+    for(const key in person){
+        console.log(key);
+    };
+
+    for (const wesh in person){
+        console.log(person[wesh]);
+    }
+/*
+    const keys = Object.keys(person)
+*/
 })();

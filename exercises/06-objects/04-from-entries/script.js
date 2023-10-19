@@ -13,4 +13,7 @@
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
     // your code here
+    const newPairs = keys.map((key,index) => [key, values[index]]);
+    const newObject = Object.fromEntries(newPairs);
+    console.log(newObject);
 })();

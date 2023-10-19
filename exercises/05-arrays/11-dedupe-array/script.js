@@ -28,4 +28,12 @@
     ];
 
     // your code here
+    const button = document.getElementById("run");
+    button.addEventListener("click", () => {
+
+        const setFruitsUniques = new Set(fruits);
+        const doubleFruits = Array.from(setFruitsUniques);
+
+        console.log(doubleFruits);
+    })
 })();

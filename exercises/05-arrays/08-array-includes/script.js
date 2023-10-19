@@ -26,4 +26,14 @@
     ];
 
     // your code here
+    const button = document.getElementById("run");
+    button.addEventListener("click", () =>{
+        const isThereApple = fruits.includes("pomme");
+        console.log(isThereApple);
+        if (isThereApple === true){
+            console.log("Oui ya une pomme wesh");
+        } else {
+            console.log("po de pom :(");
+        };
+    });
 })();

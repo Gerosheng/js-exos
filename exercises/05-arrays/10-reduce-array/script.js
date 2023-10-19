@@ -89,4 +89,11 @@
     ];
 
     // your code here
+    const button = document.getElementById("run");
+    button.addEventListener("click", () => {
+
+        const sum = people.reduce((acc, num) => acc + num.age, 0);
+
+        console.log(`L'âge total des personnes dans le tableau est ${sum}`);
+    })
 })();

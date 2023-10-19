@@ -89,4 +89,20 @@
     ];
 
     // your code here
-})();
+    const button = document.getElementById("run");
+    button.addEventListener("click", ()=>{
+        const matchingPerson = people.find(person => person.lastname === "Dupont" && person.firstname === "Jean");
+
+        if (matchingPerson){
+            console.log("Email:", matchingPerson.email);
+            const index = people.indexOf(matchingPerson);
+            console.log("Index dans le tableau:", index);
+        }else{
+            console.log("La personne n'a pas été trouvée dans le tableau 'people'.");
+        }
+
+
+        
+        }
+    
+)})();

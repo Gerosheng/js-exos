@@ -89,4 +89,9 @@
     ];
 
     // your code here
+    const button = document.getElementById("run");
+    button.addEventListener("click", () =>{
+        const newTable = people.filter(majors => majors.age > 18);
+        console.log (newTable);
+    })
 })();
