@@ -16,5 +16,14 @@
             this.age = age;
         }
     }
-    // your code here
+   function createCatInstances(){
+    const skitty = new Cat("Skitty", 9);
+    const pixel = new Cat("Pixel", 6);
+
+    console.log("Cat 1:", skitty);
+    console.log("Cat 2:", pixel);
+   }
+   const runButton = document.getElementById("run");
+   runButton.addEventListener("click", createCatInstances);
+
 })();

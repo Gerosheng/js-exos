@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
+    const target = document.getElementById("target");
+    const table = document.createElement("table");
+
+    for (let i=1; i <= 10; i++){
+        const row = document.createElement("tr");
+
+        for (let j=1; j<=10; j++){
+            const cell = document.createElement("td");
+            const result = i*j;
+
+            cell.textContent = `${i} x ${j} = ${result}`;
+            row.appendChild(cell);
+        }
+        table.appendChild(row);
+    }
+    target.appendChild(table);
 })();

@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
+    const passOne = document.getElementById("pass-one");
+    const passTwo = document.getElementById("pass-two");
+    const runButton = document.getElementById("run");
+
+    runButton.addEventListener("click", () => {
+        const passwordOneValue = passOne.value;
+        const passwordTwoValue = passTwo.value;
+
+        if (passwordOneValue === passwordTwoValue){
+            passOne.style.border = "1px solid green";
+            passTwo.style.border = "1px solid green";
+        } else {
+            passOne.style.border = "1px solid red";
+            passTwo.style.border = "1px solid red";
+        }
+    });
 })();

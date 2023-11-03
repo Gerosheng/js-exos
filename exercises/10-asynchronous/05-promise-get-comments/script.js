@@ -11,4 +11,22 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        window.lib.getPosts()
+            .then(articles => {
+                return Promise.all(articles.map(article => {
+                    return window.lib.getComments(article.id)
+                    .then(comments => {
+                        article.comments = comments;
+                        return article;
+                    });
+                }));
+            })
+            .then(articlesWithComments => {
+                console.log("Articles with comments:", articlesWithComments);
+            })
+            .catch(error => {
+                console.error("An error occurred:", error);
+            })
+    })
 })();

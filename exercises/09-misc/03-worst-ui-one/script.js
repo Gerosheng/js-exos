@@ -11,4 +11,12 @@
 
 (() => {
     // your code here
+    const target = document.getElementById("target");
+    const slider = document.getElementById("slider");
+
+    slider.addEventListener("input", () => {
+        const sliderValue = slider.value;
+
+        target.textContent = `+${sliderValue}`;
+    })
 })();

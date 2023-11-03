@@ -11,4 +11,30 @@
 
 (() => {
     // your code here
+    (() => {
+        document.getElementById("run").addEventListener("click", async () => {
+            const heroId = document.getElementById("hero-id").value;
+    
+            if (!heroId) {
+                console.error("Please enter a hero ID.");
+                return;
+            }
+    
+            try {
+                const response = await fetch(`http://localhost:3000/heroes/${heroId}`, {
+                    method: "DELETE",
+                });
+    
+                if (!response.ok) {
+                    console.error("Failed to delete the hero.");
+                    return;
+                }
+    
+                console.log(`Hero with ID ${heroId} has been deleted.`);
+            } catch (error) {
+                console.error("An error occurred:", error);
+            }
+        });
+    })();
+    
 })();

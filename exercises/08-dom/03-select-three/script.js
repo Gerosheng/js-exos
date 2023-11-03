@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+    const targetParagraphs = document.querySelectorAll("p.target");
+
+    targetParagraphs.forEach((wesh) => {
+        wesh.textContent ="owned";
+    });
 })();

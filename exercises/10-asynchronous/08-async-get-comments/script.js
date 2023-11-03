@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", async () => {
+        try {
+            const articles = await window.lib.getPosts();
+    
+            for (const article of articles) {
+                const comments = await window.lib.getComments(article.id);
+                article.comments = comments;
+            }
+    
+            console.log(articles);
+        } catch (error) {
+            console.error("An error occurred:", error);
+        }
+    });
 })();

@@ -19,4 +19,15 @@
     ];
 
     // your code here
+    const image = document.querySelector("figure img");
+    const nextButton = document.getElementById("next");
+    let currentIndex = 0;
+
+    nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % gallery.length;
+        console.log(currentIndex);
+
+        image.setAttribute("src", gallery[currentIndex]);
+    });
+
 })();

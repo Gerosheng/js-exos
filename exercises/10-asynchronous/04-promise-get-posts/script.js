@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        window.lib.getPosts()
+            .then(articles => {
+                console.log("Articles:", articles);
+            })
+            .catch(error => {
+                console.error("An error occurred:", error);
+            });
+    });
+    
 })();

@@ -11,4 +11,23 @@
 
 (() => {
     // your code here
+    (() => {
+        // Find the input element and the validity indicator element
+        const input = document.getElementById("pass-one");
+        const validity = document.getElementById("validity");
+    
+        // Add an input event listener to the input element
+        input.addEventListener("input", () => {
+            // Get the current input value
+            const inputValue = input.value;
+    
+            // Check if the content has at least 8 characters and at least 2 digits
+            const hasMinLength = inputValue.length >= 8;
+            const hasTwoDigits = (inputValue.match(/\d/g) || []).length >= 2;
+    
+            // Update the validity indicator
+            validity.textContent = hasMinLength && hasTwoDigits ? "ok" : "Pas ok";
+        });
+    })();
+    
 })();

@@ -11,4 +11,6 @@
 
 (() => {
     // your code here
+    const targetParagraph = document.querySelector("p.target");
+    targetParagraph.textContent = "owned";
 })();
